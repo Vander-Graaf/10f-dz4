@@ -19,6 +19,9 @@ let htmlCode = `
 
 
 
+
+
+
 // TASK 1
 function getLi() {
   const li = document.querySelector('li');
