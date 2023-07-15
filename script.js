@@ -1,27 +1,6 @@
 
 
 
-
-
-
-
-
-let htmlCode = `
-<ul>
-  <li class="list-item green" data-test-id="1">green</li>
-  <li class="list-item red" data-test-id="2">red</li>
-  <li class="list-item orange" data-test-id="3">yellow</li>
-  <li class="list-item blue" data-test-id="4">blue</li>
-  <li class="list-item white" data-test-id="5">orange</li>
-</ul>
-`;
-
-
-
-
-
-
-
 // TASK 1
 function getLi() {
   const li = document.querySelector('li');
@@ -36,12 +15,11 @@ console.log(li)
 
 
 // TASK 2
-function getArrayLi(html) {
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const pasteArrayLi = Array.from(doc.querySelectorAll('li'), li => li.textContent);
+function getArrayLi() {
+  const pasteArrayLi = Array.from(document.querySelectorAll('li'), li => li.textContent);
   return pasteArrayLi;
 }
-const ArrayLi = getArrayLi(htmlCode);
+const ArrayLi = getArrayLi();
 console.log(ArrayLi);
 
 // TASK 2
@@ -51,13 +29,12 @@ console.log(ArrayLi);
 
 
 // TASK 3
-function getArrayCLass(html) {
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const itemlist = doc.querySelectorAll('.list-item');
+function getArrayCLass() {
+  const itemlist = document.querySelectorAll('.list-item');
   const pasteArrayClass = Array.from(itemlist, itemlist => itemlist.textContent);
   return pasteArrayClass;
 }
-const ArrayClass = getArrayCLass(htmlCode);
+const ArrayClass = getArrayCLass();
 console.log(ArrayClass);
 // TASK 3
 
@@ -67,13 +44,12 @@ console.log(ArrayClass);
 
 
 // TASK 4
-function getArrayAttribute(html) {
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const itemlist = doc.querySelectorAll('.list-item');
+function getArrayAttribute() {
+  const itemlist = document.querySelectorAll('.list-item');
   const pasteArrayAttribute = Array.from(itemlist, itemlist => itemlist.getAttribute('Class'));
   return pasteArrayAttribute;
 }
-const ArrayAttribute = getArrayAttribute(htmlCode);
+const ArrayAttribute = getArrayAttribute();
 console.log(ArrayAttribute);
 // TASK 4
 
@@ -82,13 +58,12 @@ console.log(ArrayAttribute);
 
 
 // TASK 5
-function getArrayIDAttribute(html) {
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const itemlist = doc.querySelectorAll('.list-item');
+function getArrayIDAttribute() {
+  const itemlist = document.querySelectorAll('.list-item');
   const pasteArrayIDAttribute = Array.from(itemlist, itemlist => itemlist.getAttribute('data-test-id'));
   return pasteArrayIDAttribute;
 }
-const arrayIDAttribute = getArrayIDAttribute(htmlCode)
+const arrayIDAttribute = getArrayIDAttribute()
 console.log(arrayIDAttribute);
 // TASK 5
 
@@ -130,6 +105,7 @@ changeItems()
 const secretLoginInput = document.getElementById('secret-login');
 secretLoginInput.value = 'You were hacked';
 //TASK 8
+
 
 
 
